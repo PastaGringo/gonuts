@@ -84,7 +84,7 @@ func (ms *MintServer) setupHttpServer() {
 	r.HandleFunc("/v1/info", ms.mintInfo).Methods(http.MethodGet)
 
 	server := &http.Server{
-		Addr:    "127.0.0.1:3338",
+		Addr:    "0.0.0.0:3338",
 		Handler: r,
 	}
 
